@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wake Up SEC Daily Brief</title>
+  <meta name="description" content="Saturday wrecked the middle of the SEC. Three of Alabama's ranked wins (Kentucky, South Carolina and LSU) lost on the same night, Texas won at LSU despite 3 Arch Manning interceptions, and the morning after belongs to coaches under fire. The hinge game is today: Ole Miss at Oklahoma at 1 p.m. ET in Norman, with OU -2.5 at DraftKings.">
+  <style>
+:root {
+  --ink: #161513;
+  --muted: #5c574e;
+  --paper: #f4efe6;
+  --card: #fffcf7;
+  --line: #ddd4c6;
+  --accent: #8a1538;
+  --accent-ink: #6e102c;
+  --navy: #10243e;
+  --stat: #f7f0e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 18px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
+}
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+}
+.skip:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 10;
+  background: #fff;
+  padding: 8px 12px;
+}
+.wrap {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1.15rem 3rem;
+}
+.site-header {
+  background: var(--navy);
+  color: #f7f1e8;
+  padding: 1.35rem 0 1.5rem;
+  margin-bottom: 1.4rem;
+}
+.site-header .wrap { padding-bottom: 0; }
+.brand {
+  margin: 0 0 0.2rem;
+  font: 600 0.78rem/1.2 system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e4d4b8;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.date {
+  margin: 0.45rem 0 0;
+  font: 500 0.95rem/1.3 system-ui, -apple-system, sans-serif;
+  color: #d7cbb6;
+}
+.dek {
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #f3eee6;
+}
+.archive {
+  margin-top: 1.15rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.88rem;
+}
+.archive h2 {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d7cbb6;
+  font-weight: 650;
+}
+.archive ul { margin: 0; padding: 0; list-style: none; }
+.archive a { color: #f3eee6; }
+.archive .current { font-weight: 650; }
+.toc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.95rem 1.1rem 1.05rem;
+  margin: 0 0 1.6rem;
+}
+.toc p {
+  margin: 0 0 0.45rem;
+  font: 650 0.72rem/1.2 system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol {
+  margin: 0;
+  padding: 0 0 0 1.2rem;
+}
+.toc li { margin: 0.15rem 0; }
+.toc a { color: var(--accent-ink); }
+a { color: var(--accent); }
+a:hover { color: var(--accent-ink); }
+h2, h3, h4 {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+section.block {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.15rem 1.15rem 0.35rem;
+  margin: 0 0 1.15rem;
+}
+section.block > h2 {
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--navy);
+  font-size: 1.28rem;
+}
+.story {
+  margin: 0 0 1.15rem;
+  padding: 0 0 0.15rem;
+  border-top: 1px solid var(--line);
+}
+.story:first-of-type { border-top: 0; }
+.kicker {
+  margin: 0.9rem 0 0.15rem;
+  font: 650 0.72rem/1.2 system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.story h3, .sub h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.08rem;
+}
+.caption {
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+  font-style: italic;
+}
+p { margin: 0 0 0.75rem; }
+.sources a { font-family: system-ui, -apple-system, sans-serif; font-size: 0.92em; }
+blockquote {
+  margin: 0 0 0.35rem;
+  padding: 0.15rem 0 0.15rem 0.9rem;
+  border-left: 3px solid var(--navy);
+  font-size: 1.05rem;
+}
+blockquote cite {
+  display: block;
+  margin-top: 0.35rem;
+  font: 500 0.82rem/1.35 system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  color: var(--muted);
+}
+.cite-link { margin: 0 0 1rem; font-size: 0.95rem; }
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: 0.65rem;
+  margin: 0 0 1rem;
+}
+.metric {
+  background: var(--stat);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem 0.75rem 0.8rem;
+}
+.metric .value {
+  display: block;
+  font: 700 1.35rem/1.1 system-ui, -apple-system, sans-serif;
+  color: var(--navy);
+}
+.metric .label, .metric .detail {
+  display: block;
+  margin-top: 0.28rem;
+  font: 0.78rem/1.35 system-ui, -apple-system, sans-serif;
+  color: var(--muted);
+}
+ul.brief, ol.brief {
+  margin: 0 0 0.9rem;
+  padding: 0 0 0 1.15rem;
+}
+ul.brief li, ol.brief li { margin: 0 0 0.7rem; }
+.table-wrap { overflow-x: auto; margin: 0 0 0.95rem; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.92rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.4rem 0.55rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--stat);
+}
+.note {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+.back-top {
+  text-align: right;
+  margin: 0.4rem 0 1.2rem;
+  font: 600 0.88rem/1.3 system-ui, -apple-system, sans-serif;
+}
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.15rem 0 0.4rem;
+  color: var(--muted);
+  font: 0.92rem/1.45 system-ui, -apple-system, sans-serif;
+}
+.site-footer p { margin: 0; }
+.home-link { color: #f3eee6; text-decoration: none; }
+.home-link:hover { text-decoration: underline; color: #fff; }
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .site-header h1 { font-size: 1.7rem; }
+  section.block { padding: 1rem 0.9rem 0.25rem; }
+}
+
+section.block > h2 + .story { border-top: 0; }
+
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to brief</a>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="brand">Wake Up SEC</p>
+      <h1>Daily Brief</h1>
+      <p class="date">Sunday, Nov 15, 2026</p>
+      <p class="dek">Saturday wrecked the middle of the SEC. Three of Alabama's ranked wins (Kentucky, South Carolina and LSU) lost on the same night, Texas won at LSU despite 3 Arch Manning interceptions, and the morning after belongs to coaches under fire. The hinge game is today: Ole Miss at Oklahoma at 1 p.m. ET in Norman, with OU -2.5 at DraftKings.</p>
+      <nav class="archive" aria-label="Archive">
+        <h2>Archive</h2>
+        <ul>
+          <li><a href="briefs/2026-11-15.html">Sunday, Nov 15, 2026</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+
+<nav class="toc" aria-label="On this page">
+  <p>On this page</p>
+  <ol>
+    <li><a href="#the-lead">The Lead</a></li>
+    <li><a href="#top-stories">Top stories</a></li>
+    <li><a href="#deep-dive">Deep dive: The SEC's soft middle just collapsed, and that helps Alabama more than anyone</a></li>
+    <li><a href="#writers">What the writers are saying</a></li>
+    <li><a href="#numbers">Numbers that matter</a></li>
+    <li><a href="#title-race">Title race and playoff picture</a></li>
+    <li><a href="#coaching">Coaching and hot seat watch</a></li>
+    <li><a href="#injuries">Injury and availability tracker</a></li>
+    <li><a href="#game-week">Game week: Saturday recaps plus Sunday's game</a></li>
+    <li><a href="#hoops">Hoops and other sports</a></li>
+    <li><a href="#recruiting">Recruiting and portal</a></li>
+    <li><a href="#fan-conversation">Fan conversation on X</a></li>
+    <li><a href="#must-reads">Must-reads</a></li>
+    <li><a href="#on-the-radar">On the radar (ET)</a></li>
+  </ol>
+</nav>
+
+<main id="main">
+<section class="block" id="the-lead">
+  <h2>The Lead</h2>
+  <p>Saturday wrecked the middle of the SEC. Three of Alabama's ranked wins (Kentucky, South Carolina and LSU) lost on the same night, Texas won at LSU despite 3 Arch Manning interceptions, and the morning after belongs to coaches under fire: Mike Elko's "Come after me," Jeff Lebby's sixth straight loss and Will Stein's "I'm pissed." The hinge game is today: Ole Miss at Oklahoma at 1 p.m. ET in Norman, with OU -2.5 at DraftKings.</p>
+</section>
+
+<section class="block" id="top-stories">
+  <h2>Top stories</h2>
+
+  <article class="story">
+    <p class="kicker">Texas</p>
+    <h3>Arch threw 3 picks and still won, and the defense matched him pick for pick.</h3>
+    <p>Safety Jelani McDonald had a career-high 3 INTs, the first SEC player with 3 in a game since Arkansas' Hudson Clark in 2020, plus 11 tackles. Manning went 19 of 35 for 174 yards. Texas is 13-0 when he runs for a TD. Manning: "Years from now I'm going to tell everyone about the game-winning drive. Not the three picks." Sarkisian on the final play: "It was by design. They were coming after us." <a href="https://texaslonghorns.com/documents/download/2026/11/15/10_-_LSU_Postgame_Notes.pdf" target="_blank" rel="noopener noreferrer">Texas postgame notes</a>, <a href="https://x.com/InsideTexas/status/2121835559496655265" target="_blank" rel="noopener noreferrer">Inside Texas (Manning)</a>, <a href="https://x.com/InsideTexas/status/2121857666184081754" target="_blank" rel="noopener noreferrer">Inside Texas (Sarkisian)</a></p>
+    <p><em>Why it matters:</em> Texas is 8-2 with Arkansas and Texas A&amp;M left. Texas has won a game with under 200 passing yards and 3 INTs only three times in 30 years, per 247Sports' David Eckert. The defense is CFP-caliber, but that formula won't hold up against a playoff team. <a href="https://x.com/Horns247/status/2121831074061815923" target="_blank" rel="noopener noreferrer">Horns247 on X</a></p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">LSU</p>
+    <h3>Kiffin's postgame was all "what if."</h3>
+    <p>He pointed to missed field goals and "two red zone interceptions, no points there," and said "Davhon (Keys) had him" on the winning TD. He also said the plan was to "lean on our defense" once Leavitt had thrown 3 picks. Separately, per Glen West: "I know it's disappointing, but we still got a ways to go...I'd be pissed too." <a href="https://www.si.com/college/lsu/football/everything-lane-kiffin-had-to-say-after-lsu-s-last-minute-loss-to-texas" target="_blank" rel="noopener noreferrer">SI/LSU (transcript)</a>, <a href="https://x.com/glenwest21/status/2121851707810631991" target="_blank" rel="noopener noreferrer">Glen West on X</a></p>
+    <p><em>Why it matters:</em> LSU (6-4, 3-4) outgained Texas 366-273 and lost anyway, its second straight loss on a late play (Kiffin cited "the last play in Kentucky"). Playing not to lose with a 21-10 lead in the third quarter is the kind of call LSU fans won't forgive. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline (AP/ESPN scoreboard)</a></p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">Texas A&amp;M</p>
+    <h3>Elko apologized, called the offense "Pathetic" and dared fans to blame him, not Marcel Reed.</h3>
+    <p>"It is a completely nonfunctional offense, and that's on me. It is my fault. ... Come after me." Reed threw for 71 yards and was benched on the final drive. Brady Hart threw an INT on his third attempt. A&amp;M had 179 yards and has been held under 10 points in four of seven SEC games. Elko also cited the wind. <a href="https://www.on3.com/teams/tennessee-volunteers/news/tennessee-football-texas-am-mike-elko-transcript/" target="_blank" rel="noopener noreferrer">On3 (Elko transcript)</a>, <a href="https://www.usatoday.com/story/sports/ncaaf/sec/2026/11/14/mike-elko-texas-am-apology-fans-marcel-reed-offense/92787627007/" target="_blank" rel="noopener noreferrer">USA Today</a>, <a href="https://www.dallasnews.com/sports/texas-am-aggies/article/mike-elko-marcel-reed-texas-a-m-tennesse-pathetic-22531244.php" target="_blank" rel="noopener noreferrer">Dallas Morning News</a></p>
+    <p><em>Why it matters:</em> A&amp;M (4-6, 1-6) was the No. 10 seed in last year's CFP and now needs to beat Oklahoma and Texas just to reach a bowl. It hasn't finished 4-8 since 2008, per On3. <a href="https://www.on3.com/sites/aggie-yell/news/mike-elko-apologizes-to-texas-am-fans-after-tennessee-loss-you-deserve-so-much-better/" target="_blank" rel="noopener noreferrer">On3 Aggie Yell</a></p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">Mississippi State</p>
+    <h3>Lebby asked directly about his job after a sixth straight loss.</h3>
+    <p>"I feel pressure of wanting to change the outcome." And: "Not good enough. Not good enough. That's the bottom line." He's 11-24 (3-21 SEC) with a buyout of about $7.65 million if he's fired after the regular season. MSU used three QBs against Auburn after AJ Swann got hurt, and one fan held up an apparent "fire Jeff Lebby" message on camera, per On3. <a href="https://www.clarionledger.com/story/sports/college/mississippi-state/2026/11/14/jeff-lebby-mississippi-state-football-coach-hot-seat/92634684007/" target="_blank" rel="noopener noreferrer">Clarion Ledger</a>, <a href="https://www.clarionledger.com/story/sports/college/mississippi-state/2026/11/14/jeff-lebby-buyout-salary-contract-mississippi-state-coach/92747961007/" target="_blank" rel="noopener noreferrer">Clarion Ledger (buyout)</a>, <a href="https://www.on3.com/teams/mississippi-state-bulldogs/news/not-good-enough-jeff-lebby-answers-questions-of-performance-and-job-security-following-blowout-loss-to-auburn/" target="_blank" rel="noopener noreferrer">On3</a></p>
+    <p><em>Why it matters:</em> MSU started 4-0 and ranked. Kamario Taylor's return in 2027 is the strongest argument for keeping Lebby. Tennessee Tech and the Egg Bowl won't change the record, so this is now a money-and-Taylor decision, not a football one.</p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">Kentucky</p>
+    <h3>Will Stein: "I'm pissed."</h3>
+    <p>"We let a team come in here and physically beat us in all three phases." Florida ran for 211 yards on 48 carries to UK's 61 on 27. Kentucky had 156 yards after its opening drive. The holding call in the end zone that gave Florida a safety was disputed by ESPN's rules analyst, per KSR. <a href="https://www.on3.com/teams/kentucky-wildcats/news/will-stein-kentucky-loss-florida-im-pissed/" target="_blank" rel="noopener noreferrer">On3/KSR</a></p>
+    <p><em>Why it matters:</em> UK (7-3, 5-3) went from controlling its CFP path to playing for pride at Missouri and against Louisville. Stein's message, "Not sulking, not blaming, not splintering," is about keeping a 7-3 team from becoming 7-5.</p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">South Carolina</p>
+    <h3>Dylan Stewart's chair kick had a costly prequel.</h3>
+    <p>USA Today reports he threw Arkansas TE Matt Adcock to the turf right after a 3rd-and-2 stop with 10:17 left. The penalty extended the drive into a field goal, and the chair kick came later. It's his second outburst this season after the Alabama game, which led to a one-game suspension. <a href="https://www.usatoday.com/story/sports/ncaaf/sec/2026/11/15/dylan-stewart-unsportsmanlike-conduct-penalty-kicks-chair-south-carolina/92792532007/" target="_blank" rel="noopener noreferrer">USA Today</a>, <a href="https://x.com/On3/status/2121816769149161697" target="_blank" rel="noopener noreferrer">On3 video</a></p>
+    <p><em>Why it matters:</em> Stewart is No. 5 in PFN's 2027 mock-draft ADP (5.9), and Georgia comes to Columbia next. Whether the school or the SEC acts "remains to be seen," per USA Today. Beamer has to act before Georgia, or the earlier suspension meant nothing. <a href="https://x.com/PFN365/status/2121589261291950307" target="_blank" rel="noopener noreferrer">PFN on X</a></p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">Arkansas</p>
+    <h3>The 34-6 rout was the Hogs' first SEC home win in more than a year.</h3>
+    <p>It's their first since beating Tennessee on Nov. 5, 2024, which was also their last win over a ranked team, per the AP. Joker Johnson had 2 INTs (one a 63-yard pick-six) and a forced fumble. South Carolina went 1 for 5 in the red zone. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline (AP)</a></p>
+    <p><em>Why it matters:</em> Arkansas (4-6) visits Texas next. Ryan Silverfield just made his best case for the job, against a team that came in with a four-game winning streak.</p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">Alabama</p>
+    <h3>The tiebreaker math now comes down to four decimal places.</h3>
+    <p>If Bama, Texas and Tennessee all finish 7-2, Alabama currently wins on conference opponents' winning percentage, by 0.0062%. Alabama loses a two-way tie to either team: to Tennessee on head-to-head and to Texas on common opponents (4-0 vs 3-1). <a href="https://247sports.com/college/alabama/article/updated-scenarios-for-alabama-to-make-sec-championship-game-after-beating-vanderbilt-292762090/" target="_blank" rel="noopener noreferrer">Bama247 (Mike Rodak)</a>, <a href="https://x.com/mikerodak/status/2121824690364711374" target="_blank" rel="noopener noreferrer">Mike Rodak on X</a></p>
+    <p><em>Why it matters:</em> Bama's résumé also lost value on Saturday. Nick Kelly noted that all three of its ranked wins lost. <a href="https://x.com/_NickKelly/status/2121822197996306678" target="_blank" rel="noopener noreferrer">Nick Kelly on X</a></p>
+  </article>
+
+  <article class="story">
+    <p class="kicker">Oklahoma and Ole Miss</p>
+    <h3>It's finally game day, and OU's president is still angry.</h3>
+    <p>Ole Miss landed in Oklahoma City at 6 p.m. Saturday, per Chase Parham. OU president Joseph Harroz Jr. said of Friday's fight with the league: "We left nothing on the table," per OU Daily. Boz (Brian Bosworth) joined fans at a Saturday tailgate that went on anyway. <a href="https://x.com/ChaseParham/status/2121772057897676934" target="_blank" rel="noopener noreferrer">Chase Parham on X</a>, <a href="https://x.com/OUDaily/status/2121778768750457248" target="_blank" rel="noopener noreferrer">OU Daily on X</a>, <a href="https://x.com/OUDaily/status/2121742890011365745" target="_blank" rel="noopener noreferrer">OU Daily (tailgate)</a></p>
+    <p><em>Why it matters:</em> See Game week. OU (5-4) gets bowl eligible with a win, and Ole Miss (6-3) needs it to stay on the CFP fringe.</p>
+  </article>
+</section>
+
+<section class="block" id="deep-dive">
+  <h2>Deep dive: The SEC's soft middle just collapsed, and that helps Alabama more than anyone</h2>
+  <div class="sub">
+    <h3>The facts</h3>
+    <p>After Saturday: Georgia 7-1 in the SEC, Alabama 6-2, Texas 5-2, Tennessee 5-2, Kentucky 5-3, Ole Miss 4-3 (plays today). Georgia goes to South Carolina next Saturday with a chance to clinch the outright title, per the AP. Alabama has Chattanooga and then Auburn, Texas has Arkansas and Texas A&amp;M, and Tennessee has LSU and Vanderbilt. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline (AP)</a>, <a href="https://247sports.com/college/alabama/article/updated-scenarios-for-alabama-to-make-sec-championship-game-after-beating-vanderbilt-292762090/" target="_blank" rel="noopener noreferrer">Bama247</a>. Before Saturday, Kalshi had Georgia at 94% to make Atlanta, Alabama 53%, and Tennessee and Texas at 33% each, all figures from before Saturday's games. <a href="https://www.si.com/prediction-markets/which-teams-will-make-the-sec-championship-georgia-alabama-texas-tennessee-battling-01m782ez3p26" target="_blank" rel="noopener noreferrer">SI (Kalshi)</a>. Yahoo's Ross Dellenger has Georgia No. 2, Alabama No. 8 and Texas No. 9 in his Top 10. Tennessee isn't in it. <a href="https://sports.yahoo.com/college-football/article/yahoo-top-10-utah-stakes-claim-to-no-1-spot-with-thrilling-late-night-win-073333717.html" target="_blank" rel="noopener noreferrer">Yahoo Sports</a></p>
+  </div>
+  <div class="sub">
+    <h3>Analysis</h3>
+    <p>Kentucky's loss took the most dangerous wild card out of the tiebreaker pool. Before Saturday, a UK finish at 7-2 could scramble the three-way scenarios. Now the race is Alabama, Texas and Tennessee, and the strange result holds: Bama wants <em>both</em> rivals to win out, because it wins the three-way tie and loses either two-way tie. If Texas or Tennessee slips, the other one likely goes to Atlanta, and Alabama becomes the CFP at-large team with the best résumé. The catch is that Bama's résumé just got weaker. Kentucky, South Carolina and LSU all lost, and the committee will see three fading ranked wins on Tuesday. Texas is the opposite case: ugly win, strong résumé. Ian Boyd called Texas "almost a lock" for the CFP, and I agree. The real loser on Saturday was Tennessee. It won comfortably at A&amp;M and gained nothing, because the three-way tiebreaker favors Alabama and LSU is coming to Knoxville with nothing left to lose. <a href="https://x.com/InsideTexas/status/2121841111270404366" target="_blank" rel="noopener noreferrer">Inside Texas (Ian Boyd)</a></p>
+  </div>
+</section>
+
+<section class="block" id="writers">
+  <h2>What the writers are saying</h2>
+  <blockquote>
+    Late heroics or not, Arch Manning gonna get an NFL GM fired so fast.
+    <cite>Kyle Tucker, on Arch Manning</cite>
+  </blockquote>
+  <p class="cite-link"><a href="https://x.com/KyleTuckerCBB/status/2121821355259924883" target="_blank" rel="noopener noreferrer">Post</a></p>
+  <blockquote>
+    This conference is officially drunk.
+    <cite>John E. Hoover, on the league's Saturday</cite>
+  </blockquote>
+  <p class="cite-link"><a href="https://x.com/johnehoover/status/2121821291498049908" target="_blank" rel="noopener noreferrer">Post</a></p>
+  <blockquote>
+    With the kind of defense displayed on Saturday in Nashville and shifty QB Keelon Russell, perhaps Bama can make some noise in the postseason.
+    <cite>Ross Dellenger (Yahoo), on Alabama</cite>
+  </blockquote>
+  <p class="cite-link"><a href="https://sports.yahoo.com/college-football/article/yahoo-top-10-utah-stakes-claim-to-no-1-spot-with-thrilling-late-night-win-073333717.html" target="_blank" rel="noopener noreferrer">Story</a></p>
+  <blockquote>
+    Texas is now almost a lock to make the playoffs.
+    <cite>Ian Boyd (Inside Texas), on Texas</cite>
+  </blockquote>
+  <p class="cite-link"><a href="https://x.com/InsideTexas/status/2121841111270404366" target="_blank" rel="noopener noreferrer">Post</a></p>
+  <p><strong>Andrew Hughes (FanSided's Fly War Eagle)</strong> on Auburn as the "Grim Reaper": Auburn's opening win over Baylor "helped get Dave Aranda fired," and Lebby could be next. <a href="https://flywareagle.com/auburn-may-be-jeff-lebby-grim-reaper-too-after-previously-getting-dave-aranda-fired" target="_blank" rel="noopener noreferrer">Story</a></p>
+  <blockquote>
+    his outbursts are beginning to develop into a troublesome reoccurrence.
+    <cite>Zac Al-Khateeb (USA Today), on Stewart</cite>
+  </blockquote>
+  <p class="cite-link"><a href="https://www.usatoday.com/story/sports/ncaaf/sec/2026/11/15/dylan-stewart-unsportsmanlike-conduct-penalty-kicks-chair-south-carolina/92792532007/" target="_blank" rel="noopener noreferrer">Story</a></p>
+  <blockquote>
+    Eight days ago, Kentucky's playoff dreams were alive and well; today, they're gone.
+    <cite>Tyler Thompson (KSR/On3), on Kentucky</cite>
+  </blockquote>
+  <p class="cite-link"><a href="https://www.on3.com/teams/kentucky-wildcats/news/will-stein-kentucky-loss-florida-im-pissed/" target="_blank" rel="noopener noreferrer">Story</a></p>
+</section>
+
+<section class="block" id="numbers">
+  <h2>Numbers that matter</h2>
+  <div class="metrics">
+    <div class="metric"><span class="value">0.0062%</span><span class="label">Alabama's current edge over Tennessee in conference opponents' winning percentage</span></div>
+    <div class="metric"><span class="value">42:11</span><span class="label">Tennessee's time of possession at A&amp;M</span><span class="detail">With 5 Cooper Ranvier field goals</span></div>
+    <div class="metric"><span class="value">211-61</span><span class="label">Florida's rushing yards vs Kentucky's</span><span class="detail">Aaron Philo had 102 of them</span></div>
+    <div class="metric"><span class="value">3-21</span><span class="label">Lebby's SEC record</span><span class="detail">About $7.65 million in buyout money attached</span></div>
+    <div class="metric"><span class="value">6</span><span class="label">Combined INTs by Arch Manning and Sam Leavitt</span><span class="detail">The game still came down to 3 seconds</span></div>
+  </div>
+  <ul class="brief">
+    <li><strong>0.0062%:</strong> Alabama's current edge over Tennessee in conference opponents' winning percentage. That's the step that decides a three-way 7-2 tie right now, and it can still move with two weeks of results. <a href="https://247sports.com/college/alabama/article/updated-scenarios-for-alabama-to-make-sec-championship-game-after-beating-vanderbilt-292762090/" target="_blank" rel="noopener noreferrer">Bama247</a></li>
+    <li><strong>42:11:</strong> Tennessee's time of possession at A&amp;M, with 5 Cooper Ranvier field goals. The Vols' formula is suffocation, not style. <a href="https://texags.com/s/80951/press-conference-elko-aggies-react-to-22-7-loss-to-no-8-tennessee" target="_blank" rel="noopener noreferrer">TexAgs</a></li>
+    <li><strong>211-61:</strong> Florida's rushing yards vs Kentucky's. Aaron Philo had 102 of them. Kentucky lost the line of scrimmage, and Stein said so. <a href="https://www.on3.com/teams/kentucky-wildcats/news/will-stein-kentucky-loss-florida-im-pissed/" target="_blank" rel="noopener noreferrer">On3/KSR</a>, <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+    <li><strong>3-21:</strong> Lebby's SEC record, with about $7.65 million in buyout money attached. <a href="https://www.clarionledger.com/story/sports/college/mississippi-state/2026/11/14/jeff-lebby-buyout-salary-contract-mississippi-state-coach/92747961007/" target="_blank" rel="noopener noreferrer">Clarion Ledger</a></li>
+    <li><strong>6:</strong> Combined INTs by Arch Manning and Sam Leavitt, and the game still came down to 3 seconds. <a href="https://x.com/On3/status/2121811671836413999" target="_blank" rel="noopener noreferrer">On3 on X</a></li>
+  </ul>
+</section>
+
+<section class="block" id="title-race">
+  <h2>Title race and playoff picture</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Team</th><th>SEC record</th></tr></thead>
+      <tbody>
+        <tr><td>Georgia</td><td>7-1</td></tr>
+        <tr><td>Alabama</td><td>6-2</td></tr>
+        <tr><td>Texas</td><td>5-2</td></tr>
+        <tr><td>Tennessee</td><td>5-2</td></tr>
+        <tr><td>Kentucky</td><td>5-3</td></tr>
+        <tr><td>Ole Miss</td><td>4-3</td></tr>
+        <tr><td>Florida</td><td>4-4</td></tr>
+        <tr><td>Auburn</td><td>4-4</td></tr>
+        <tr><td>South Carolina</td><td>4-4</td></tr>
+        <tr><td>Oklahoma</td><td>3-3</td></tr>
+        <tr><td>Missouri</td><td>3-4</td></tr>
+        <tr><td>LSU</td><td>3-4</td></tr>
+        <tr><td>Arkansas</td><td>2-5</td></tr>
+        <tr><td>Mississippi State</td><td>2-6</td></tr>
+        <tr><td>Texas A&amp;M</td><td>1-6</td></tr>
+        <tr><td>Vanderbilt</td><td>1-6</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>SEC standings (conference):</strong> Georgia 7-1 · Alabama 6-2 · Texas 5-2 · Tennessee 5-2 · Kentucky 5-3 · Ole Miss 4-3 · Florida, Auburn and South Carolina 4-4 · Oklahoma 3-3 · Missouri and LSU 3-4 · Arkansas 2-5 · Mississippi State 2-6 · Texas A&amp;M and Vanderbilt 1-6. Ole Miss and Oklahoma play today. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline (AP/ESPN)</a></p>
+  <p><strong>What changed:</strong> Georgia can clinch the outright title at South Carolina next Saturday, per the AP. Kentucky's CFP path is gone, per KSR, and LSU is "virtually" eliminated, per the AP. Texas moves toward a lock. South Carolina (No. 17) and Missouri (No. 22) should fall out of or down the CFP Top 25. <a href="https://www.on3.com/teams/kentucky-wildcats/news/will-stein-kentucky-loss-florida-im-pissed/" target="_blank" rel="noopener noreferrer">On3/KSR</a></p>
+  <p><strong>CFP rankings released Nov. 10, SEC teams:</strong> 1 Georgia · 3 Alabama · 6 Texas · 8 Tennessee · 11 Kentucky · 17 South Carolina · 19 Ole Miss · 21 LSU · 22 Missouri. <a href="https://www.cbssports.com/college-football/news/college-football-playoff-rankings-top-25-2026-week-11/" target="_blank" rel="noopener noreferrer">CBS Sports</a></p>
+  <p><strong>Markets vs models:</strong> Kalshi's SEC title-game market before Saturday: Georgia 94%, Alabama 53%, Tennessee 33%, Texas 33%. <a href="https://www.si.com/prediction-markets/which-teams-will-make-the-sec-championship-georgia-alabama-texas-tennessee-battling-01m782ez3p26" target="_blank" rel="noopener noreferrer">SI (Kalshi)</a>. CBS's pre-Saturday simulations: Georgia 94%, Alabama 52%, Texas 22%, Tennessee 22%, Kentucky 6%, Ole Miss 2%. <a href="https://www.cbssports.com/college-football/news/big-12-acc-sec-big-ten-conference-championship-game-scenarios-tiebreakers-odds-paths/" target="_blank" rel="noopener noreferrer">CBS Sports</a>. Those Kalshi and CBS figures are from before Saturday's games.</p>
+  <p><strong>Media Top 10:</strong> Yahoo's Dellenger ranks Georgia 2, Alabama 8 and Texas 9, behind Utah, UCLA, Indiana, Notre Dame, Miami and Wake Forest. <a href="https://sports.yahoo.com/college-football/article/yahoo-top-10-utah-stakes-claim-to-no-1-spot-with-thrilling-late-night-win-073333717.html" target="_blank" rel="noopener noreferrer">Yahoo Sports</a></p>
+  <p><strong>Read:</strong> The SEC has three near-locks (Georgia, Alabama and Texas) and Tennessee as the likely fourth if it beats LSU. Ole Miss needs to win today and get chaos to stay relevant.</p>
+  <p><strong>Next:</strong> The AP poll comes out today, and the third CFP rankings are on Tuesday night (Nov. 17).</p>
+</section>
+
+<section class="block" id="coaching">
+  <h2>Coaching and hot seat watch</h2>
+  <ul class="brief">
+    <li><strong>Mississippi State (Jeff Lebby):</strong> Six straight losses, 3-21 in the SEC and a ~$7.65M buyout after the season. The hottest seat in the league. <a href="https://www.clarionledger.com/story/sports/college/mississippi-state/2026/11/14/jeff-lebby-mississippi-state-football-coach-hot-seat/92634684007/" target="_blank" rel="noopener noreferrer">Clarion Ledger</a></li>
+    <li><strong>Texas A&amp;M (Mike Elko):</strong> A third straight loss, fourth in five, and a public apology. TexAgs commenters are calling for the OC's firing. Elko protected his QB and himself, but his first move has to be at offensive coordinator, and "Give me a chance" sounds like a coach who knows he needs one. <a href="https://texags.com/s/80951/press-conference-elko-aggies-react-to-22-7-loss-to-no-8-tennessee" target="_blank" rel="noopener noreferrer">TexAgs</a>, <a href="https://www.dallasnews.com/sports/texas-am-aggies/article/mike-elko-marcel-reed-texas-a-m-tennesse-pathetic-22531244.php" target="_blank" rel="noopener noreferrer">Dallas Morning News</a></li>
+    <li><strong>LSU (Lane Kiffin):</strong> Back-to-back late losses and CFP hopes gone. Kiffin: "I don't overreact." Inside The Gators piled on: "Lane loses again." <a href="https://www.si.com/college/lsu/football/everything-lane-kiffin-had-to-say-after-lsu-s-last-minute-loss-to-texas" target="_blank" rel="noopener noreferrer">SI/LSU</a>, <a href="https://x.com/InsideTheGators/status/2121825737820840372" target="_blank" rel="noopener noreferrer">Inside The Gators on X</a></li>
+    <li><strong>South Carolina (Shane Beamer):</strong> A 28-point loss and a star pass rusher out of control again. The question this week is discipline. <a href="https://www.usatoday.com/story/sports/ncaaf/sec/2026/11/15/dylan-stewart-unsportsmanlike-conduct-penalty-kicks-chair-south-carolina/92792532007/" target="_blank" rel="noopener noreferrer">USA Today</a></li>
+    <li><strong>Rising:</strong> Auburn's Alex Golesh (bowl eligible for the first time in three years) and Arkansas' Ryan Silverfield (first SEC home win since 2024). <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+  </ul>
+</section>
+
+<section class="block" id="injuries">
+  <h2>Injury and availability tracker</h2>
+  <ul class="brief">
+    <li><strong>South Carolina:</strong> QB LaNorris Sellers (ankle) missed Arkansas. Cutter Woods threw 3 INTs in his place. His status for Georgia is the week's big availability question. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline (AP)</a></li>
+    <li><strong>Mississippi State:</strong> QB AJ Swann left the Auburn game injured again, and MSU played three QBs. <a href="https://www.clarionledger.com/story/sports/college/mississippi-state/2026/11/14/jeff-lebby-buyout-salary-contract-mississippi-state-coach/92747961007/" target="_blank" rel="noopener noreferrer">Clarion Ledger</a></li>
+    <li><strong>Ole Miss and Oklahoma:</strong> No new injury news ahead of kickoff. Check the SEC availability report before the game.</li>
+  </ul>
+</section>
+
+<section class="block" id="game-week">
+  <h2>Game week: Saturday recaps plus Sunday's game</h2>
+  <p class="note">Lines are from DraftKings and FanDuel via Picks Mammoth and ScoresAndStats. All times ET.</p>
+  <article class="story">
+    <h3>Ole Miss at Oklahoma, today at 1 p.m., Norman</h3>
+    <p class="caption">Oklahoma -2.5 (DraftKings -118, FanDuel -110), O/U 48.5.</p>
+    <p>OU opened at -4 and the total at 53.5, per ScoresAndStats. TV: SEC Network, per Saturday's SEC announcement. <a href="https://picksmammoth.com/games/college-football/2026-11-15-ole-miss-rebels-vs-oklahoma-sooners/" target="_blank" rel="noopener noreferrer">Picks Mammoth</a>, <a href="https://www.scoresandstats.com/predictions/football/ncaaf/mississippi-rebels-vs-oklahoma-sooners-odds-picks/2026-11-15/" target="_blank" rel="noopener noreferrer">ScoresAndStats</a></p>
+    <p><em>What it decides:</em> An Ole Miss win (to 5-3) keeps a CFP at-large pulse after the 42-7 loss to Georgia. An OU win makes the Sooners bowl eligible. <a href="https://www.cbssports.com/betting/news/ole-miss-oklahoma-prediction-odds-time-week-11-college-football-sunday-picks/" target="_blank" rel="noopener noreferrer">CBS Sports</a></p>
+    <p><em>Matchup to watch:</em> Trinidad Chambliss vs a rested, angry home crowd, on a day when the market moved 1.5 points toward the Rebels.</p>
+  </article>
+  <ul class="brief">
+    <li><strong>Texas 22, LSU 21.</strong> New angle: Texas held LSU to three three-and-outs on four fourth-quarter drives, per Yahoo. Gianni Spetic's 41- and 50-yard field goals set up the final drive. <a href="https://sports.yahoo.com/college-football/article/yahoo-top-10-utah-stakes-claim-to-no-1-spot-with-thrilling-late-night-win-073333717.html" target="_blank" rel="noopener noreferrer">Yahoo Sports</a>, <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a>. Viral: an On3 clip shows Mike the Tiger (the costumed mascot) going after a Texas player after the game. <a href="https://x.com/On3/status/2121857745884160351" target="_blank" rel="noopener noreferrer">On3 on X</a></li>
+    <li><strong>Tennessee 22, Texas A&amp;M 7.</strong> A&amp;M led 7-6 at halftime and had 62 yards and three first downs after it. TJ Metcalf and Dejuan Lane each had an INT. <a href="https://texags.com/s/80951/press-conference-elko-aggies-react-to-22-7-loss-to-no-8-tennessee" target="_blank" rel="noopener noreferrer">TexAgs</a>, <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+    <li><strong>Georgia 48, Missouri 21.</strong> Georgia scored on its first five possessions. Gunner Stockton went 18 of 24 for 252 yards, and Missouri was 18% on third down. SEC rushing leader Jamal Roberts had 62 yards. <a href="https://sports.yahoo.com/college-football/article/yahoo-top-10-utah-stakes-claim-to-no-1-spot-with-thrilling-late-night-win-073333717.html" target="_blank" rel="noopener noreferrer">Yahoo Sports</a>, <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+    <li><strong>Alabama 21, Vanderbilt 6.</strong> Lotzeir Brooks had 2 TDs, and Dijon Lee Jr.'s 83-yard kickoff return set up the last one. Vandy had 14 penalties and a season-low 235 yards. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+    <li><strong>Florida 21, Kentucky 14.</strong> The go-ahead TD was Philo's 2-yard run plus a two-point pass to Dallas Wilson with 9:08 left. Florida's first points came on the disputed safety. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a>, <a href="https://www.on3.com/teams/kentucky-wildcats/news/will-stein-kentucky-loss-florida-im-pissed/" target="_blank" rel="noopener noreferrer">On3/KSR</a></li>
+    <li><strong>Auburn 41, Mississippi State 9.</strong> Three of Auburn's four fumble recoveries came on strip sacks. Keshaun Singleton had 7 catches for 103 yards and 2 TDs, and MSU ran for 46 yards. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+    <li><strong>Arkansas 34, South Carolina 6.</strong> KJ Jackson threw 2 TDs, and SC ran for a season-low 98 yards. See Top stories. <a href="https://thevolunteersideline.com/story/sec-saturday-scoreboard-nov-14" target="_blank" rel="noopener noreferrer">The Volunteer Sideline</a></li>
+    <li><strong>Idle:</strong> None. Every SEC team played or plays this weekend.</li>
+  </ul>
+</section>
+
+<section class="block" id="hoops">
+  <h2>Hoops and other sports</h2>
+  <ul class="brief">
+    <li><strong>Missouri vs Marquette, today at 2:30 p.m. in Chicago (United Center), NBCSN/Peacock.</strong> Freshman Jason Crowe Jr. scored 34 against SIU Edwardsville. Both teams are 2-1. <a href="https://www.nbcsports.com/mens-college-basketball/news/how-to-watch-missouri-vs-marquette-tv-live-stream-info-storylines-for-tonights-game" target="_blank" rel="noopener noreferrer">NBC Sports</a></li>
+    <li><strong>Texas vs Baylor, today in San Antonio.</strong> Jon Rothstein put it on his "games to watch" list and asked whether Texas is "good enough to push for a deep NCAA Tournament in 2027." <a href="https://x.com/JonRothstein/status/2121922911737102495" target="_blank" rel="noopener noreferrer">Jon Rothstein on X</a></li>
+  </ul>
+</section>
+
+<section class="block" id="recruiting">
+  <h2>Recruiting and portal</h2>
+  <ul class="brief">
+    <li><strong>Oklahoma:</strong> 4-star 2028 LB Tylan Henderson of Weiss High School, an Austin-area native, committed on Saturday evening. He's OU's seventh 2028 commit and second defensive commit in two days, per Parker Thune. <a href="https://x.com/ParkerThune/status/2121750109793005666" target="_blank" rel="noopener noreferrer">Parker Thune on X</a>, <a href="https://x.com/SoonerScoop/status/2121751609420202114" target="_blank" rel="noopener noreferrer">SoonerScoop on X</a></li>
+    <li><strong>Mississippi State:</strong> CB Julian McDonald decommitted, per Rivals' Chad Simmons and Hayes Fawcett. Bad timing for a staff on the hot seat. <a href="https://x.com/Rivals/status/2121812769020448853" target="_blank" rel="noopener noreferrer">Rivals on X</a></li>
+  </ul>
+</section>
+
+<section class="block" id="fan-conversation">
+  <h2>Fan conversation on X</h2>
+  <ul class="brief">
+    <li><strong>"DO YOU BELIEVE IN MIRACLES":</strong> Texas' walk-off post was the biggest SEC post of the night, with 8,435 likes and about 125K views. LSU's one-word "Final" had about 130K views, and Texas' "Spot the ball" clip had 984 likes. <a href="https://x.com/TexasFootball/status/2121821478752858543" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://x.com/LSUfootball/status/2121821271352897554" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://x.com/TexasFootball/status/2121833015139590200" target="_blank" rel="noopener noreferrer">3</a></li>
+    <li><strong>The chair heard 'round the SEC:</strong> On3's clip of Stewart kicking the chair had 2,973 likes. Hog fans joked that he kicked it farther than SC's kicker can kick a football, while Gamecock fans vented about "pure pain." <a href="https://x.com/On3/status/2121816769149161697" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://x.com/raz0rbackburner/status/2121819107821801696" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://x.com/_CoachBarfield/status/2121818389714698263" target="_blank" rel="noopener noreferrer">3</a></li>
+    <li><strong>Mike the Tiger vs Texas:</strong> On3's clip of LSU's costumed mascot going after a Texas player after the game drew 1,419 likes. Arch Manning's postgame hype clip had 1,083. <a href="https://x.com/On3/status/2121857745884160351" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://x.com/On3/status/2121824437360029870" target="_blank" rel="noopener noreferrer">2</a></li>
+    <li><strong>Rebels finally in Oklahoma:</strong> Chase Parham's "Ole Miss landed in Oklahoma City at 6 pm" post drew 483 likes and about 33K views. OU's own "Spot the ball" video had 1,521 likes, and Ole Miss' #BeatOklahoma hype video had about 33K views. <a href="https://x.com/ChaseParham/status/2121772057897676934" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://x.com/OU_Football/status/2121770156514787759" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://x.com/OleMissFB/status/2121792938183139583" target="_blank" rel="noopener noreferrer">3</a></li>
+    <li><strong>Bama fans doing tiebreaker math:</strong> Mike Rodak's 0.0062% post had about 30K views, and Nick Kelly's "all 3 ranked wins lost" post had about 10.5K. <a href="https://x.com/mikerodak/status/2121824690364711374" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://x.com/_NickKelly/status/2121822197996306678" target="_blank" rel="noopener noreferrer">2</a></li>
+  </ul>
+</section>
+
+<section class="block" id="must-reads">
+  <h2>Must-reads</h2>
+  <ol class="brief">
+    <li><a href="https://www.on3.com/teams/tennessee-volunteers/news/tennessee-football-texas-am-mike-elko-transcript/" target="_blank" rel="noopener noreferrer">On3: Everything Mike Elko said</a>: The full apology and "Come after me," word for word.</li>
+    <li><a href="https://www.clarionledger.com/story/sports/college/mississippi-state/2026/11/14/jeff-lebby-mississippi-state-football-coach-hot-seat/92634684007/" target="_blank" rel="noopener noreferrer">Clarion Ledger: Lebby on his job security</a>: The quotes, the record and the remaining schedule in one place.</li>
+    <li><a href="https://www.on3.com/teams/kentucky-wildcats/news/will-stein-kentucky-loss-florida-im-pissed/" target="_blank" rel="noopener noreferrer">On3/KSR: Will Stein, "I'm pissed"</a>: The most honest postgame of the night, and the stats behind it.</li>
+    <li><a href="https://247sports.com/college/alabama/article/updated-scenarios-for-alabama-to-make-sec-championship-game-after-beating-vanderbilt-292762090/" target="_blank" rel="noopener noreferrer">Bama247: Alabama's SEC title game scenarios</a>: The clearest explanation of the tiebreakers for every contender, not just Bama.</li>
+    <li><a href="https://www.usatoday.com/story/sports/ncaaf/sec/2026/11/15/dylan-stewart-unsportsmanlike-conduct-penalty-kicks-chair-south-carolina/92792532007/" target="_blank" rel="noopener noreferrer">USA Today: Stewart's second outburst</a>: The penalty that came before the chair, which matters more.</li>
+    <li><a href="https://www.si.com/college/lsu/football/everything-lane-kiffin-had-to-say-after-lsu-s-last-minute-loss-to-texas" target="_blank" rel="noopener noreferrer">SI: Everything Lane Kiffin said</a>: His defense of playing it safe with the lead.</li>
+    <li><a href="https://texaslonghorns.com/documents/download/2026/11/15/10_-_LSU_Postgame_Notes.pdf" target="_blank" rel="noopener noreferrer">Texas postgame notes</a>: McDonald's place in the record book and Manning's 9 wins vs AP Top 25 teams, the most by an active FBS QB.</li>
+  </ol>
+</section>
+
+<section class="block" id="on-the-radar">
+  <h2>On the radar (ET)</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Date</th><th>What's ahead</th></tr></thead>
+      <tbody>
+        <tr><td>Sun Nov 15</td><td>Ole Miss at Oklahoma, 1 p.m., Norman. MBB: Missouri vs Marquette, 2:30, NBCSN/Peacock (Chicago). Texas vs Baylor (San Antonio). AP poll comes out today.</td></tr>
+        <tr><td>Tue Nov 17</td><td>Third CFP rankings (evening).</td></tr>
+        <tr><td>Sat Nov 21</td><td>Georgia at South Carolina (Georgia can clinch the outright title). LSU at Tennessee. Arkansas at Texas. Kentucky at Missouri. Chattanooga at Alabama. Auburn vs Samford. Tennessee Tech at Mississippi State, noon, SEC Network+.</td></tr>
+        <tr><td>Fri Nov 27</td><td>Egg Bowl, Mississippi State at Ole Miss, ABC (Clarion Ledger lists 11 a.m., likely CT).</td></tr>
+        <tr><td>Sat Nov 28</td><td>Iron Bowl (Auburn at Alabama). Texas A&amp;M vs Texas.</td></tr>
+        <tr><td>Sat Dec 5</td><td>SEC Championship Game, Atlanta.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+    <p class="back-top"><a href="#top">Back to top</a></p>
+    <footer class="site-footer">
+      <p>Wake Up SEC · <a href="https://x.com/wakeupSEC" target="_blank" rel="noopener noreferrer">@wakeupSEC</a> on X</p>
+    </footer>
+  </div>
+</body>
+</html>
