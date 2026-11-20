@@ -368,6 +368,16 @@ figure.pull-quote figcaption .src {
 .scoreboard .logo { width: 22px; height: 22px; object-fit: contain; flex: none;
   background: #fff; border-radius: 50%; padding: 2px; box-sizing: content-box; }
 .scoreboard .logo-blank { width: 26px; flex: none; }
+
+/* closing mark (added Nov 20, 2026): quotes need both opening and closing double quotes */
+figure.pull-quote blockquote p:last-child::after {
+  content: "”";
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
+  color: var(--navy);
+  margin-left: 0.03em;
+  font-weight: 600;
+}
+.scoreboard .sb-final { display: block; text-align: right; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; opacity: 0.75; text-transform: uppercase; }
 </style>
 </head>
 <body id="top">
@@ -440,7 +450,7 @@ figure.pull-quote figcaption .src {
 <p class="kicker">SCOREBOARD</p><h2 class="el-head">Thursday night</h2>
 <p>No. 1 Florida answered Wednesday's loss to Houston. Texas A&amp;M erased a 12-point halftime deficit to beat TCU in overtime.</p>
 <p>No. 6 Texas rolled, and Auburn dropped to 3-3 under Steven Pearl.</p>
-<ul class="scoreboard"><li><span class="score"><span class="sb-row win"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/57.png" alt="" width="22" height="22" loading="lazy"><span class="tm"><span class="rk">No. 1</span> Florida</span><span class="pts">85</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/277.png" alt="" width="22" height="22" loading="lazy"><span class="tm">West Virginia</span><span class="pts">72</span></span></span><span class="sb-note">Players Era 8 third-place game. Thomas Haugh scored 22.</span></li><li><span class="score"><span class="sb-row win"><span class="logo-blank"></span><span class="tm">Notre Dame</span><span class="pts">78</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="" width="22" height="22" loading="lazy"><span class="tm">Auburn</span><span class="pts">73</span></span></span></li><li><span class="score"><span class="sb-row win"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/251.png" alt="" width="22" height="22" loading="lazy"><span class="tm"><span class="rk">No. 6</span> Texas</span><span class="pts">92</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/253.png" alt="" width="22" height="22" loading="lazy"><span class="tm">Southern Utah</span><span class="pts">68</span></span></span><span class="sb-note">Matas Vokietaitis had 26 points and 11 rebounds.</span></li><li><span class="score"><span class="sb-row win"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/245.png" alt="" width="22" height="22" loading="lazy"><span class="tm">Texas A&amp;M</span><span class="pts">97</span></span><span class="sb-row lose"><span class="logo-blank"></span><span class="tm">TCU 92 (OT)</span><span class="pts"></span></span></span><span class="sb-note">Aggies erased a 51-39 halftime deficit; PJ Haggerty scored 29.</span></li></ul>
+<ul class="scoreboard"><li><span class="score"><span class="sb-row win"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/57.png" alt="" width="22" height="22" loading="lazy"><span class="tm"><span class="rk">No. 1</span> Florida</span><span class="pts">85</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/277.png" alt="" width="22" height="22" loading="lazy"><span class="tm">West Virginia</span><span class="pts">72</span></span></span><span class="sb-note">Players Era 8 third-place game. Thomas Haugh scored 22.</span></li><li><span class="score"><span class="sb-row win"><span class="logo-blank"></span><span class="tm">Notre Dame</span><span class="pts">78</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="" width="22" height="22" loading="lazy"><span class="tm">Auburn</span><span class="pts">73</span></span></span></li><li><span class="score"><span class="sb-row win"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/251.png" alt="" width="22" height="22" loading="lazy"><span class="tm"><span class="rk">No. 6</span> Texas</span><span class="pts">92</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/253.png" alt="" width="22" height="22" loading="lazy"><span class="tm">Southern Utah</span><span class="pts">68</span></span></span><span class="sb-note">Matas Vokietaitis had 26 points and 11 rebounds.</span></li><li><span class="score"><span class="sb-row win"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/245.png" alt="" width="22" height="22" loading="lazy"><span class="tm">Texas A&amp;M</span><span class="pts">97</span></span><span class="sb-row lose"><img class="logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png" alt="" width="22" height="22" loading="lazy"><span class="tm">TCU</span><span class="pts">92</span></span><span class="sb-final">Final/OT</span></span><span class="sb-note">Aggies erased a 51-39 halftime deficit; PJ Haggerty scored 29.</span></li></ul>
 </section>
 <section class="el el-feature" id="is-sankey-losing-his-grip">
 <p class="kicker">THE POWER STRUGGLE</p><h2 class="el-head">Is Sankey losing his grip?</h2>
@@ -493,19 +503,13 @@ figure.pull-quote figcaption .src {
 </section>
 <section class="el el-pull-quotes" id="what-they-said">
 <h2 class="el-head">WHAT THEY SAID</h2>
-<figure class="pull-quote"><blockquote><p>LSU realized that the boycott could be real, and that this just wasn't worth it all for RJ Luis and men's basketball.</p></blockquote><figcaption>— </figcaption></figure>
-<figure class="pull-quote"><blockquote><p></p></blockquote><figcaption>— </figcaption></figure>
-<figure class="pull-quote"><blockquote><p></p></blockquote><figcaption>— A source close to the situation, via <a href="https://x.com/GoodmanHoops/status/2123555006469288122" target="_blank" rel="noopener noreferrer">Jeff Goodman</a></figcaption></figure>
-<figure class="pull-quote"><blockquote><p>Probably would have been good to have that conversation last night.</p></blockquote><figcaption>— </figcaption></figure>
-<figure class="pull-quote"><blockquote><p></p></blockquote><figcaption>— </figcaption></figure>
-<figure class="pull-quote"><blockquote><p></p></blockquote><figcaption>— <a href="https://x.com/DanWolken/status/2123552289361158458" target="_blank" rel="noopener noreferrer">Dan Wolken</a></figcaption></figure>
-<figure class="pull-quote"><blockquote><p>The idea of the rest of the SEC boycotting LSU over playing RJ Luis, on some kind of moral high ground, is laughable.</p></blockquote><figcaption>— </figcaption></figure>
-<figure class="pull-quote"><blockquote><p></p></blockquote><figcaption>— </figcaption></figure>
-<figure class="pull-quote"><blockquote><p></p></blockquote><figcaption>— <a href="https://x.com/KyleTuckerCBB/status/2123462854934446104" target="_blank" rel="noopener noreferrer">Kyle Tucker</a>, on the radio before the reversal</figcaption></figure>
+<figure class="pull-quote"><blockquote><p>LSU realized that the boycott could be real, and that this just wasn't worth it all for RJ Luis and men's basketball.</p></blockquote><figcaption>— A source close to the situation, via <a href="https://x.com/GoodmanHoops/status/2123555006469288122" target="_blank" rel="noopener noreferrer">Jeff Goodman</a></figcaption></figure>
+<figure class="pull-quote"><blockquote><p>Probably would have been good to have that conversation last night.</p></blockquote><figcaption>— <a href="https://x.com/DanWolken/status/2123552289361158458" target="_blank" rel="noopener noreferrer">Dan Wolken</a></figcaption></figure>
+<figure class="pull-quote"><blockquote><p>The idea of the rest of the SEC boycotting LSU over playing RJ Luis, on some kind of moral high ground, is laughable.</p></blockquote><figcaption>— <a href="https://x.com/KyleTuckerCBB/status/2123462854934446104" target="_blank" rel="noopener noreferrer">Kyle Tucker</a>, on the radio before the reversal</figcaption></figure>
 </section>
 <section class="el el-numbers" id="by-the-numbers">
 <h2 class="el-head">BY THE NUMBERS</h2>
-<ul class="numbers"><li><span class="big">0.82</span>Texas A&amp;M's points per possession on the road, last among three Power Four teams under 1.0 per <a href="https://x.com/TomFornelli/status/2123585280477446298" target="_blank" rel="noopener noreferrer">Tom Fornelli</a> (Michigan State 0.86, Virginia 0.84).</li><li><span class="big">25-19</span>Steven Pearl's on-court record at Auburn (.568) after Thursday's 78-73 loss to Notre Dame (22-16 in 2025-26, 3-3 this season), compared with Bruce Pearl's 202-71 (.740) over his final eight post-rebuild seasons.</li></ul>
+<ul class="numbers"><li><span class="big">25-19</span>Steven Pearl's on-court record at Auburn (.568) after Thursday's 78-73 loss to Notre Dame (22-16 in 2025-26, 3-3 this season), compared with Bruce Pearl's 202-71 (.740) over his final eight post-rebuild seasons.</li></ul>
 </section>
 <section class="el el-quick-hits" id="the-rest-fast">
 <h2 class="el-head">THE REST, FAST</h2>
